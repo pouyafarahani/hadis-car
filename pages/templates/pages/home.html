@@ -5,8 +5,8 @@
 
     {% if messages %}
         {% for message in messages %}
-            <div>
-                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            <div class="alert alert-warning" role="alert">
+                <p>{{ message }}</p>
             </div>
         {% endfor %}
     {% endif %}
@@ -19,32 +19,33 @@
                 <h1><span>Compare Instant</span>
                     Car Service
                     Deals.</h1>
-                <p> >We are the leading auto parts company with the world-wide reputation <br>of premium quality
-                    products and maintenace services.
-                </p>
             </div>
 
 
-
             <div class="form wow slideInRight">
-                <form class="booking-widget white-text" style="cursor:default" action="{% url 'pages:home' %}" method="post">
+                <form class="booking-widget white-text" style="cursor:default" action="{% url 'pages:home' %}"
+                      method="post">
                     {% csrf_token %}
                     <div>
                         <div class="bw-input vrm-input"><label>
-                                <div style="position:relative"><input name="tag" maxlength="100" required="" type="text"
-                                        aria-label="Vehicle Registration" value="" class="invalid"
-                                        placeholder="Vehicle Registration"><span
-                                        style="display: inline-block; color: rgb(233, 29, 17); text-align: left; font-size: 16px; font-weight: 700; background-color: rgb(255, 255, 255); padding: 4px; margin-top: 4px; margin-bottom: 4px; border-radius: 3px;">
-                                </div>
-                            </label></div>
+                            <div style="position:relative"><input name="tag" maxlength="100" required="" type="text"
+                                                                  aria-label="Vehicle Registration" value=""
+                                                                  class="invalid"
+                                                                  placeholder="Vehicle Registration"><span
+                                    style="display: inline-block; color: rgb(233, 29, 17); text-align: left; font-size: 16px; font-weight: 700; background-color: rgb(255, 255, 255); padding: 4px; margin-top: 4px; margin-bottom: 4px; border-radius: 3px;">
+                            </div>
+                        </label></div>
                         <div class="bw-input postcode-input"><label><span style="display:none;margin-bottom:2px">Enter
                                     your postcode</span>
-                                <div style="position:relative"><input name="postal_code" maxlength="100"
-                                        placeholder="Enter your postcode" required="" type="text"
-                                        aria-label="Enter your postcode" value="" class="invalid"><span
-                                        style="display: inline-block; color: rgb(233, 29, 17); text-align: left; font-size: 16px; font-weight: 700; background-color: rgb(255, 255, 255); padding: 4px; margin-top: 4px; margin-bottom: 4px; border-radius: 3px;">
-                                </div>
-                            </label></div><button type="submit" class="btn blue">Compare Prices Instantly</button>
+                            <div style="position:relative"><input name="postal_code" maxlength="100"
+                                                                  placeholder="Enter your postcode" required=""
+                                                                  type="text"
+                                                                  aria-label="Enter your postcode" value=""
+                                                                  class="invalid"><span
+                                    style="display: inline-block; color: rgb(233, 29, 17); text-align: left; font-size: 16px; font-weight: 700; background-color: rgb(255, 255, 255); padding: 4px; margin-top: 4px; margin-bottom: 4px; border-radius: 3px;">
+                            </div>
+                        </label></div>
+                        <button type="submit" class="btn blue">Compare Prices Instantly</button>
                     </div>
                 </form>
             </div>
