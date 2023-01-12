@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # my app
-    'home',
-    'car_detail',
+    'pages',
 ]
 
 MIDDLEWARE = [

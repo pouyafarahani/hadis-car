@@ -20,11 +20,15 @@ def HomeView(request):
             form.save()
             response = requests.request("POST", url, headers=headers, data=payload)
             res = response.json()
-            return render(request, 'detail_car.html', {'response': res})
+            return render(request, 'pages/detail_car.html', {'response': res})
 
         # not valid
         messages.warning(request, 'Please enter your information correctly')
-        return render(request, 'home/home.html')
+        return render(request, 'pages/home.html')
 
     # request get
-    return render(request, 'home/home.html')
+    return render(request, 'pages/home.html')
+
+
+def CarDetailView(request):
+    return render(request, 'pages/detail_car.html')
