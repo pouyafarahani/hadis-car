@@ -2,6 +2,15 @@
 {% load static %}
 
 {% block body %}
+
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
     <!-- stat hero -->
 
     <section class="p-0">
@@ -16,10 +25,11 @@
             </div>
 
             <div class="form wow slideInRight">
-                <form class="booking-widget white-text" style="cursor:default">
+                <form class="booking-widget white-text" style="cursor:default" action="{% url 'home:home' %}" method="post">
+                    {% csrf_token %}
                     <div>
                         <div class="bw-input vrm-input"><label>
-                            <div style="position:relative"><input name="VRM" maxlength="100" required="" type="text"
+                            <div style="position:relative"><input name="tag" maxlength="100" required="" type="text"
                                                                   aria-label="Vehicle Registration" value=""
                                                                   class="invalid"
                                                                   placeholder="Vehicle Registration"><span
@@ -28,7 +38,7 @@
                         </label></div>
                         <div class="bw-input postcode-input"><label><span style="display:none;margin-bottom:2px">Enter
                                     your postcode</span>
-                            <div style="position:relative"><input name="Postcode" maxlength="100"
+                            <div style="position:relative"><input name="postal_code" maxlength="100"
                                                                   placeholder="Enter your postcode" required=""
                                                                   type="text"
                                                                   aria-label="Enter your postcode" value=""

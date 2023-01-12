@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import CarModel
+
+
+@admin.register(CarModel)
+class CarAdmin(admin.ModelAdmin):
+    list_display = ['tag', 'postal_code']
