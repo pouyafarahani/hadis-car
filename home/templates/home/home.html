@@ -1,0 +1,89 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block body %}
+    <!-- stat hero -->
+
+    <section class="p-0">
+        <div class="bg-image">
+            <div class="hero-details wow slideInUp">
+                <h1><span>Compare Instant</span>
+                    Car Service
+                    Deals.</h1>
+                <p> >We are the leading auto parts company with the world-wide reputation <br>of premium quality
+                    products and maintenace services.
+                </p>
+            </div>
+
+            <div class="form wow slideInRight">
+                <form class="booking-widget white-text" style="cursor:default">
+                    <div>
+                        <div class="bw-input vrm-input"><label>
+                            <div style="position:relative"><input name="VRM" maxlength="100" required="" type="text"
+                                                                  aria-label="Vehicle Registration" value=""
+                                                                  class="invalid"
+                                                                  placeholder="Vehicle Registration"><span
+                                    style="display: inline-block; color: rgb(233, 29, 17); text-align: left; font-size: 16px; font-weight: 700; background-color: rgb(255, 255, 255); padding: 4px; margin-top: 4px; margin-bottom: 4px; border-radius: 3px;">
+                            </div>
+                        </label></div>
+                        <div class="bw-input postcode-input"><label><span style="display:none;margin-bottom:2px">Enter
+                                    your postcode</span>
+                            <div style="position:relative"><input name="Postcode" maxlength="100"
+                                                                  placeholder="Enter your postcode" required=""
+                                                                  type="text"
+                                                                  aria-label="Enter your postcode" value=""
+                                                                  class="invalid"><span
+                                    style="display: inline-block; color: rgb(233, 29, 17); text-align: left; font-size: 16px; font-weight: 700; background-color: rgb(255, 255, 255); padding: 4px; margin-top: 4px; margin-bottom: 4px; border-radius: 3px;">
+                            </div>
+                        </label></div>
+                        <button type="submit" class="btn blue">Compare Prices Instantly</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- end hero -->
+
+    <!-- start contact-info -->
+    <section class="p-0">
+        <div class="contact-info">
+            <div>
+                <img src="https://angfuzsoft.com/wordpress/mechon/wp-content/uploads/2022/07/contact_1_1.svg" alt="">
+                <div>
+                    <p>WE ARE OPEN MONDAY-FRIDAY</p>
+                    <h3>7:00 am - 9:00 pm</h3>
+                </div>
+            </div>
+            <div>
+                <img src="https://angfuzsoft.com/wordpress/mechon/wp-content/uploads/2022/07/contact_1_2.svg" alt="">
+
+                <div>
+                    <p>HAVE A QUESTION?</p>
+                    <h3>+2546 214 21536</h3>
+                </div>
+            </div>
+            <div>
+                <img src="https://angfuzsoft.com/wordpress/mechon/wp-content/uploads/2022/07/contact_1_3.svg" alt="">
+
+                <div>
+                    <p>NEED A REPAIR? OUR ADDRESS</p>
+                    <h3>Liza Street, NewYork</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- end contact-info -->
+
+    <!-- script -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+        // wow
+        new WOW().init();
+
+    </script>
+{% endblock body %}
