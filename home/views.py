@@ -9,8 +9,7 @@ def HomeView(request):
         form = CarForms(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'You have successfully logged in')
-            return render(request, 'home/home.html')
+            return render(request, 'detail_car.html')
 
         # not valid
         messages.warning(request, 'Please enter your information correctly')
