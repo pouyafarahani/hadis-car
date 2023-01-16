@@ -15,6 +15,7 @@ headers = {
     'Content-Type': 'application/json'
 }
 
+Mot = 40
 
 # home page
 def HomeView(request):
@@ -40,7 +41,30 @@ def HomeView(request):
 
                 # car valid ♥
                 if response.status_code == 200:
-                    return render(request, 'pages/detail_car.html', {'response': res})
+                    engine = response.json()['engineCapacity']
+
+                    # engine 0 to 2000
+                    if engine < 2000:
+                        FullService = 150  # £
+                        InterimService = 120  # £
+                        print(f'in hast engine: {engine} 0 ta 2000')
+
+                    # engine 2000 to 3000
+                    if 2000 < engine < 3000:
+                        FullService = 170  # £
+                        InterimService = 140  # £
+
+                        return render(request, 'pages/detail_car.html',
+                                      {'response': res,
+                                       'FullService': FullService,
+                                       'InterimService': InterimService,
+                                       })
+
+                    # engine 3000 to 4000
+                    if 3000 < engine < 4000:
+                        FullService = 180  # £
+                        InterimService = 150  # £
+                        print(f'in hast {engine} 3000 ta 4000')
 
             # not connect internet
             except Exception as e:
@@ -57,5 +81,6 @@ def HomeView(request):
 
 
 # page 2 car detail
-def CarDetailView(request):
-    return render(request, 'pages/detail_car.html')
+# def CarDetailView(request):
+#     print('2', request.POST)
+#     return render(request, 'pages/detail_car.html')

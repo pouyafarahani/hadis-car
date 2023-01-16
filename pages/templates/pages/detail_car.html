@@ -24,7 +24,12 @@
                     </div>
                 </div>
                 <div class="form wow slideInRight info-form">
-                    <form class="booking-widget white-text" style="cursor:default" action="{% url 'reservations:rezerv' %}" method="get">
+                    <form class="booking-widget white-text" style="cursor:default" action="{% url 'reservations:rezerv' %}" method="post">
+                        {% csrf_token %}
+                        <div hidden>
+                            <input type="text" name="full" readonly value="{{ FullService }}">
+                            <input type="text" name="noll" readonly value="{{ InterimService }}">
+                        </div>
                         <div>
                             <div class="row row-cols-1 row-cols-lg-3">
                                 <div class="col">

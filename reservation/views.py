@@ -2,7 +2,6 @@ from django.shortcuts import render
 
 
 def RezervView(request):
-    if request.method == 'POST':
-        pass
-
-    return render(request, 'rezerv.html')
+    FullService = request.POST['full']
+    InterimService = request.POST['noll']
+    return render(request, 'rezerv.html', {'FullService': FullService, 'InterimService': InterimService})
