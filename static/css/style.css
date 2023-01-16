@@ -986,9 +986,10 @@ footer ul li a:hover {
     width: 24px;
     height: 24px;
 }
-
 input[type="checkbox"] {
     accent-color: #962800b3 !important;
+    position: relative;
+    z-index: 10;
 }
 
 .service-item-select div label {
@@ -1011,6 +1012,9 @@ input[type="checkbox"] {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0);
     color: rgba(255, 255, 255, 0.6);
+}
+.inp:focus,textarea:focus{
+    border:2px solid #b10404;
 }
 
 textarea {
@@ -1081,7 +1085,9 @@ textarea {
     border: 1px solid rgba(255, 255, 255, 0);
     color: rgba(255, 255, 255, 0.6);
 }
-
+.nice-select:focus{
+    border: 2px solid #e60000;
+}
 .nice-select ul.list {
     width: 100% !important;
     height: 180px !important;
@@ -1107,12 +1113,15 @@ textarea {
 
 .nice-select .option:hover {
     color: rgb(0, 0, 0) !important;
+    border: 1px solid #b10404;
 }
 
 .form-check {
     display: inline-flex;
     align-items: center;
     padding-left: 0;
+    position: relative;
+    z-index: 10;
 
 }
 
@@ -1262,6 +1271,12 @@ del {
     .book-form {
         padding: 30px 10px;
         width: 100%;
+    }
+    .texts {
+        margin-bottom: 30px;
+    }
+    .bg-image.padding{
+        padding-top: 100px;
     }
 }
 .wrapper{

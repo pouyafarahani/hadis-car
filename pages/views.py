@@ -47,7 +47,12 @@ def HomeView(request):
                     if engine < 2000:
                         FullService = 150  # £
                         InterimService = 120  # £
-                        print(f'in hast engine: {engine} 0 ta 2000')
+
+                        return render(request, 'pages/detail_car.html',
+                                      {'response': res,
+                                       'FullService': FullService,
+                                       'InterimService': InterimService,
+                                       })
 
                     # engine 2000 to 3000
                     if 2000 < engine < 3000:
@@ -64,7 +69,12 @@ def HomeView(request):
                     if 3000 < engine < 4000:
                         FullService = 180  # £
                         InterimService = 150  # £
-                        print(f'in hast {engine} 3000 ta 4000')
+
+                        return render(request, 'pages/detail_car.html',
+                                      {'response': res,
+                                       'FullService': FullService,
+                                       'InterimService': InterimService,
+                                       })
 
             # not connect internet
             except Exception as e:
