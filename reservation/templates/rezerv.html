@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>book</title>
+    <title>home</title>
 
     <!-- link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -21,285 +21,345 @@
 </head>
 
 <body>
-    <div class="wrapper">
+<div class="wrapper">
 
-        <!-- header -->
-        <header>
-            <div class="desktop-header">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-4">
-                            <div><a href="" class="logo"><img src="{% static 'img/photo_2023-01-14_00-52-24-removebg-preview.png' %}" alt=""></a></div>
-                        </div>
-                        <div class="col-8">
-                            <div class="navigation">
-                                <nav>
-                                    <ul>
-                                        <li class="active"><a href="{% url 'pages:home' %}">Home</a></li>
-                                        <li><a href="">About us</a></li>
-                                        <li><a href="">Services</a></li>
-                                        <li><a href="">Cotact us</a></li>
-                                        <li><a href="">Featured</a></li>
-
-                                    </ul>
-                                </nav>
-
-                                <div>
-                                    <a href="" class="cart"><i class="fa-solid fa-shopping-cart "></i> cart</a>
-                                </div>
-
-                                <div>
-                                    <a href="" class="login"><i class="fa-sharp fa-solid fa-user"></i> Login</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- mobile-header -->
-            <div class="mobile-header">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-2">
-                            <div><a href="" class="logo"><img src="{% static 'img/photo_2023-01-14_00-52-24-removebg-preview.png' %}" alt=""></a></div>
-                        </div>
-                        <div class="col-10 text-end">
-                            <div>
-                                <div id="hamburger" onclick="this.classList.toggle('open');">
-                                    <svg width="50" height="50" viewBox="0 0 100 100">
-                                        <path class="line line1"
-                                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                                        <path class="line line2" d="M 20,50 H 80" />
-                                        <path class="line line3"
-                                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                                    </svg>
-                                </div>
-
-                                <div class="navigation-manu">
-                                    <div class="d-flex align-items-center">
-                                        <div>
-                                            <a href="" class="cart"><i class="fa-solid fa-shopping-cart "></i>cart</a>
-                                        </div>
-
-                                        <div>
-                                            <a href="" class="login ms-4"><i class="fa-sharp fa-solid fa-user"></i>
-                                                Login</a>
-                                        </div>
-                                    </div>
-                                    <ul>
-                                        <li class="active"><a href="{% url 'pages:home' %}">Home</a></li>
-                                        <li><a href="">About us</a></li>
-                                        <li><a href="">Services</a></li>
-                                        <li><a href="">Cotact us</a></li>
-                                        <li><a href="">Featured</a></li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </header>
-        <!-- header -->
-
-
-        <!-- stat hero -->
-
-        <section class="" style="background-image: url({% static 'img/booking-cars-bg.jpg' %});background-size: cover;">
+    <!-- header -->
+    <header>
+        <div class="desktop-header">
             <div class="container">
-                <div class="texts mt-5 wow slideInUp">
-                    <h2>Make your booking</h2>
-                    <p class="text-danger"><a href="" class="text-white">Home /</a> Booking
-                    </p>
-                </div>
-                <div class="row row-cols-1">
-                    <div class="col">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <div><a href="" class="logo"><img
+                                src="{% static 'img/photo_2023-01-14_00-52-24-removebg-preview.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="navigation">
+                            <nav>
+                                <ul>
+                                    <li class="active"><a href="{% url 'pages:home' %}">Home</a></li>
+                                    <li><a href="">About us</a></li>
+                                    <li><a href="">Services</a></li>
+                                    <li><a href="">Cotact us</a></li>
+                                    <li><a href="">Featured</a></li>
 
-                        <form action="" class="book-form">
+                                </ul>
+                            </nav>
+
                             <div>
-                                <p class="mb-0 text-white">please select a service for your <strong
-                                        class="text-success">AUDI A5
-                                        - SM18EBP</strong></p>
-                                <span class="text-secondary span">3.5 petrol 2018 , 39834 miles on 13/08/2022</span>
+                                <a href="" class="cart"><i class="fa-solid fa-shopping-cart "></i> cart</a>
                             </div>
-                            <div class="row row-cols-1 row-cols-md-3 p-3 mt-3 border-bottom">
-                                <div class="col">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- mobile-header -->
+        <div class="mobile-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <div><a href="" class="logo"><img
+                                src="{% static 'img/photo_2023-01-14_00-52-24-removebg-preview.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-10 text-end">
+                        <div>
+                            <div id="hamburger" onclick="this.classList.toggle('open');">
+                                <svg width="50" height="50" viewBox="0 0 100 100">
+                                    <path class="line line1"
+                                          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"/>
+                                    <path class="line line2" d="M 20,50 H 80"/>
+                                    <path class="line line3"
+                                          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"/>
+                                </svg>
+                            </div>
+
+                            <div class="navigation-manu">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <a href="" class="cart"><i class="fa-solid fa-shopping-cart "></i> cart</a>
+                                    </div>
+
+                                </div>
+                                <ul>
+                                    <li class="active"><a href="{% url 'pages:home' %}">Home</a></li>
+                                    <li><a href="">About us</a></li>
+                                    <li><a href="">Services</a></li>
+                                    <li><a href="">Cotact us</a></li>
+                                    <li><a href="">Featured</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- header -->
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} fade show" role="alert">
+                <strong></strong> {{ message }}
+            </div>
+            <div class="wrapper">
+        {% endfor %}
+    {% endif %}
+
+    <!-- stat hero -->
+
+    <section class="" style="background-image: url({% static 'img/booking-cars-bg.jpg' %});background-size: cover;">
+        <div class="container">
+            <div class="texts mt-5 wow slideInUp">
+                <h2>Make your booking</h2>
+                <p class="text-danger"><a href="" class="text-white">Home /</a> Booking
+                </p>
+            </div>
+            <div class="row row-cols-1">
+                <div class="col">
+
+                    <form action="{% url 'reservations:rezerv' %}" class="book-form" method="post">
+                        {% csrf_token %}
+                        <div>
+                            <p class="mb-0 text-white">please select a service for your <strong
+                                    class="text-success">AUDI A5
+                                - SM18EBP</strong></p>
+                            <span class="text-secondary span">3.5 petrol 2018 , 39834 miles on 13/08/2022</span>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-3 p-3 mt-3 border-bottom">
+                            <div class="col">
+                                <a href="">
                                     <div class="service-item-select">
                                         <div>
-                                            <input type="checkbox" value="1" name="service[1][]" />
-                                            <label for="service-1">Full service <i class="fa-solid fa-screwdriver-wrench"></i></label>
+                                            <input type="checkbox" value="1" name="Full_service"/>
+                                            <label for="service-1" class="text-white">Full service <i
+                                                    class="fa-solid fa-screwdriver-wrench"></i></label>
                                         </div>
                                         <div>
-                                            <del>£ 210</del><span class="price"><strong>£ </strong>{{ FullService }}</span>
+                                            <del class="text-white">£200.00</del>
+                                            <span class="price"><strong>£
+                                                    </strong>{{ FullService }}</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="">
                                     <div class="service-item-select">
                                         <div>
-                                            <input type="checkbox"  value="1" name="service[1][]" />
-                                            <label for="service-1">Interim service <i
+                                            <input type="checkbox" value="1" name="Interim_service"/>
+                                            <label for="service-1" class="text-white">Interim service <i
                                                     class="fa-solid fa-wrench"></i></label>
                                         </div>
                                         <div>
-                                            <del>£ 190</del><span class="price"><strong>£ </strong>{{ InterimService }}</span>
+                                            <del class="text-white">£200.00</del>
+                                            <span class="price"><strong>£
+                                                    </strong>{{ InterimService }}</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col">
+                                </a>
+
+                            </div>
+                            <div class="col">
+                                <a href="">
                                     <div class="service-item-select">
                                         <div>
-                                            <input type="checkbox"  value="1" name="service[2][]" />
-                                            <label for="service-1">Add a mot <i
-                                                class="fa-sharp fa-solid fa-table-list"></i></label>
+                                            <input type="checkbox" value="1" name="Add_a_mot"/>
+                                            <label for="service-1" class="text-white">Add a mot <i
+                                                    class="fa-sharp fa-solid fa-table-list"></i></label>
                                         </div>
                                         <div>
-                                            <del>£ 60</del><span class="price"><strong>£ </strong>40</span>
+                                            <del class="text-white">£200.00</del>
+                                            <span class="price"><strong>£
+                                                    </strong>40</span>
                                         </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row p-2 pt-4 pb-4">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <p class="mb-0 text-white">Which one do you want to <strong
+                                            class="text-success">fix?</strong></p>
+                                </div>
+                                <div class="form-check form-check-inline">
+
+                                    <input class="" name="Wheelaligment" type="checkbox" id="inlineCheckbox1"
+                                           value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Wheelaligment</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Diagnose" type="checkbox" id="inlineCheckbox2"
+                                           value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Diagnose</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Tyres" type="checkbox" id="inlineCheckbox1" value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Tyres</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Clutches" type="checkbox" id="inlineCheckbox1"
+                                           value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Clutches</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Suspension" type="checkbox" id="inlineCheckbox2"
+                                           value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Suspension</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Cambelt" type="checkbox" id="inlineCheckbox2" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Cambelt</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Exhaust" type="checkbox" id="inlineCheckbox2" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Exhaust</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Brakes" type="checkbox" id="inlineCheckbox2" value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Brakes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="Batteries" type="checkbox" id="inlineCheckbox2"
+                                           value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Batteries</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="other" type="checkbox" id="other" value="option2"
+                                           data-toggle="collapse">
+                                    <label class="form-check-label" for="other">other</label>
+                                </div>
+                                <div id="checkout_coupon" class="collapse mt-3" data-parent="#accordion">
+                                    <div class="checkout_info coupon_info">
+                                            <textarea class="pt-3" name="" id="" rows="4"
+                                                      placeholder="Anything else?"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row p-2 bg-success">
+                            <div class="col">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h4>Total</h4>
+                                    </div>
+                                    <div>
+                                        <h6>£29.50</h6>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="row p-2 pt-4 pb-4">
-                                <div class="col">
-                                    <div class="mb-3">
-                                        <p class="mb-0 text-white">Which one do you want to <strong
-                                                class="text-success">fix?</strong></p>
-                                    </div>
-                                    <div class="form-check form-check-inline">
 
-                                        <input class="" type="checkbox" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">exhaust</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="" type="checkbox" id="inlineCheckbox2" value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">exhaust</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="" type="checkbox" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">exhaust</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="" type="checkbox" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">exhaust</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="" type="checkbox" id="inlineCheckbox2" value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">exhaust</label>
-                                    </div>
+                        <!-- contact -->
+                        <div class="mt-5 mb-4">
+                            <h3 class="font">Fill your details</h3>
+                        </div>
 
-                                </div>
+                        {% if forms.errors %}
+                            <div class="">
+                                {{ forms.errors }}
                             </div>
+                        {% endif %}
 
-                            <div class="row p-2 bg-success">
-                                <div class="col">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <h4>Total</h4>
-                                        </div>
-                                        <div>
-                                            <h6>£129.50</h6>
-                                        </div>
+                        <div class="row p-3 mt-3 g-4">
+                            <div class="col-12 col-md-6"><input type="date" name="select_title"
+                                                                placeholder="Select date" class="inp">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div>
+                                    <div class="select_form_select">
+                                        <select class="select_option" name="cuntry" id="countru_name">
+                                            <option value="2">select title</option>
+                                            <option value="3"> title</option>
+                                            <option value="4"> title</option>
+                                            <option value="5"> title</option>
+                                            <option value="6"> title</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-
-
-                            <!-- contact -->
-                            <div class="mt-5 mb-4">
-                                <h3 class="font">Fill your details</h3>
+                            <div class="col-12 col-md-6">
+                                <div>
+                                    <div class="select_form_select">
+                                        <select class="select_option" name="Address" id="countru_name">
+                                            <option value="2">please select an address</option>
+                                            <option value="3">address</option>
+                                            <option value="4">address</option>
+                                            <option value="5">address</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div>
+                                    <input type="text" placeholder="Firrst Name" name="Firstname" class="inp">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6"><input type="text" placeholder="Last Name" name="Lastname"
+                                                                class="inp">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div>
+                                    <input type="text" placeholder="Mobile" name="PhoneNumber" class="inp">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6"><input type="tel" placeholder="fax" name="Fax" class="inp">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div>
+                                    <input type="email" placeholder="Email address" name="Email" class="inp">
+                                </div>
                             </div>
 
-                            <div class="row p-3 mt-3 g-4">
-                                <div class="col-12 col-md-6"><input type="date" placeholder="Select date" class="inp">
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div>
-                                        <div class="select_form_select">
-                                            <select class="select_option" name="cuntry" id="countru_name">
-                                                <option value="2">select title</option>
-                                                <option value="3"> title</option>
-                                                <option value="4"> title</option>
-                                                <option value="5"> title</option>
-                                                <option value="6"> title</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div>
-                                        <div class="select_form_select">
-                                            <select class="select_option" name="cuntry" id="countru_name">
-                                                <option value="2">please select an address</option>
-                                                <option value="3">address</option>
-                                                <option value="4">address</option>
-                                                <option value="5">address</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div>
-                                        <input type="text" placeholder="Firrst Name" class="inp">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6"><input type="text" placeholder="Last Name" class="inp">
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div>
-                                        <input type="text" placeholder="Mobile" class="inp">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6"><input type="tel" placeholder="Telephone" class="inp">
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div>
-                                        <input type="email" placeholder="Email address" class="inp">
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
+                            <div class="col-12">
                                     <textarea class="pt-3" name="" id="" rows="5"
-                                        placeholder="Anything else?"></textarea>
-                                </div>
+                                              placeholder="Anything else?"></textarea>
                             </div>
+                        </div>
 
 
-                            <div class="row mt-2 ps-4">
-                                <div class="col">
-                                    <div>
-                                        <div class="form-check d-flex align-items-start">
-                                            <input class="" type="checkbox" value="" id="flexCheckChecked">
-                                            <label class="form-check-label" for="flexCheckChecked">
-                                                click here to confirm that you agree with our <a href="">Terms</a> and
-                                                <a href="">conditions</a>
-                                                , refund and money back.
-                                            </label>
-                                        </div>
+                        <div class="row mt-2 ps-4">
+                            <div class="col">
+                                <div>
+                                    <div class="form-check d-flex align-items-start">
+                                        <input class="" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            click here to confirm that you agree with our <a href="">Terms</a> and
+                                            <a href="">conditions</a>
+                                            , refund and money back.
+                                        </label>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="row mt-4">
-                                <div class="col text-center">
-                                    <div class="col-md-5 m-auto">
-                                        <button type="submit" class="btn blue">Book Now</button>
-                                    </div>
+                        <div class="row mt-4">
+                            <div class="col text-center">
+                                <div class="col-md-5 m-auto">
+                                    <button type="submit" class="btn blue">Book Now</button>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                    </form>
 
-                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- end hero -->
+    <!-- end hero -->
 
     </div>
 
@@ -318,21 +378,27 @@
         //niceSelect
         $('.select_option').niceSelect();
 
-        $("input:checkbox").on('click', function() {
-  // in the handler, 'this' refers to the box clicked on
-  var $box = $(this);
-  if ($box.is(":checked")) {
-    // the name of the box is retrieved using the .attr() method
-    // as it is assumed and expected to be immutable
-    var group = "input:checkbox[name='" + $box.attr("name") + "']";
-    // the checked state of the group/box on the other hand will change
-    // and the current value is retrieved using .prop() method
-    $(group).prop("checked", false);
-    $box.prop("checked", true);
-  } else {
-    $box.prop("checked", false);
-  }
-});
+        $("input:checkbox").on('click', function () {
+            // in the handler, 'this' refers to the box clicked on
+            var $box = $(this);
+            if ($box.is(":checked")) {
+                // the name of the box is retrieved using the .attr() method
+                // as it is assumed and expected to be immutable
+                var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                // the checked state of the group/box on the other hand will change
+                // and the current value is retrieved using .prop() method
+                $(group).prop("checked", false);
+                $box.prop("checked", true);
+            } else {
+                $box.prop("checked", false);
+            }
+        });
+
+
+        // collps
+        $('#other').click(function () {
+            $('#checkout_coupon').toggleClass('show');
+        });
 
     </script>
 </body>

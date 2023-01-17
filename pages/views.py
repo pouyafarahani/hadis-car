@@ -79,7 +79,7 @@ def HomeView(request):
             # not connect internet
             except Exception as e:
                 logging.error(e)
-                messages.warning(request, 'Please enter your license plate correctly')
+                messages.warning(request, 'error internet connect')
                 return render(request, 'pages/home.html')
 
         # not valid | 8 < x
