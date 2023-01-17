@@ -128,10 +128,13 @@
                         {% csrf_token %}
                         <div>
                             <p class="mb-0 text-white">please select a service for your <strong
-                                    class="text-success">AUDI A5
-                                - SM18EBP</strong></p>
-                            <span class="text-secondary span">3.5 petrol 2018 , 39834 miles on 13/08/2022</span>
+                                    class="text-success">{{ make }}
+                                - {{ register }}</strong></p>
                         </div>
+                    <div hidden>
+                        <input type="text" value="{{ make }}" name="make">
+                        <input type="text" value="{{ register }}" name="register">
+                    </div>
                         <div class="row row-cols-1 row-cols-md-3 p-3 mt-3 border-bottom">
                             <div class="col">
                                 <a href="">
@@ -332,15 +335,11 @@
 
                         <div class="row mt-2 ps-4">
                             <div class="col">
-                                <div>
-                                    <div class="form-check d-flex align-items-start">
-                                        <input class="" type="checkbox" value="" id="flexCheckChecked">
-                                        <label class="form-check-label" for="flexCheckChecked">
-                                            click here to confirm that you agree with our <a href="">Terms</a> and
-                                            <a href="">conditions</a>
-                                            , refund and money back.
-                                        </label>
-                                    </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="" name="delivery" type="checkbox" id="inlineCheckbox2"
+                                           value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Batteries</label>
+                                </div>
                                 </div>
                             </div>
                         </div>

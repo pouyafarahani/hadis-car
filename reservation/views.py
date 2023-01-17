@@ -11,6 +11,7 @@ def RezervView(request):
 
         # data valid
         if form.is_valid():
+            print(form)
             form.save()
             messages.success(request, 'Your reservation has been successfully registered')  # رزرو شما با موفقیت ثبت شد
             return render(request, 'pages/home.html')
@@ -24,4 +25,10 @@ def RezervView(request):
     # request get | price service
     FullService = request.GET['FullService']
     InterimService = request.GET['InterimService']
-    return render(request, 'rezerv.html', {'FullService': FullService, 'InterimService': InterimService})
+    register = request.GET['register']
+    make = request.GET['make']
+    return render(request, 'rezerv.html', {'FullService': FullService,
+                                           'InterimService': InterimService,
+                                           'register': register,
+                                           'make': make,
+                                           })

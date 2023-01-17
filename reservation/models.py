@@ -17,6 +17,7 @@ class RezervModel(models.Model):
     Exhaust = models.BooleanField(default=False)
     Brakes = models.BooleanField(default=False)
     Batteries = models.BooleanField(default=False)
+
     # other ...
     other = models.TextField(null=True, blank=True)
 
@@ -28,3 +29,12 @@ class RezervModel(models.Model):
     PhoneNumber = models.CharField(max_length=30)
     Fax = models.CharField(max_length=100, null=True, blank=True)
     Email = models.EmailField(max_length=254, null=True, blank=True)
+
+    # car make
+    make = models.CharField(max_length=10, null=True, blank=True)
+    register = models.CharField(max_length=20, null=True, blank=True)
+    # collection and delivery for free
+    delivery = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.register

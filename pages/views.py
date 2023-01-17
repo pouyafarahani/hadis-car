@@ -41,7 +41,10 @@ def HomeView(request):
 
                 # car valid ♥
                 if response.status_code == 200:
+                    print(response.json())
                     engine = response.json()['engineCapacity']
+                    register = response.json()['registrationNumber']
+                    make = response.json()['make']
 
                     # engine 0 to 2000
                     if engine < 2000:
@@ -52,6 +55,8 @@ def HomeView(request):
                                       {'response': res,
                                        'FullService': FullService,
                                        'InterimService': InterimService,
+                                       'register': register,
+                                       'make': make,
                                        })
 
                     # engine 2000 to 3000
@@ -63,6 +68,8 @@ def HomeView(request):
                                       {'response': res,
                                        'FullService': FullService,
                                        'InterimService': InterimService,
+                                       'register': register,
+                                       'make': make,
                                        })
 
                     # engine 3000 to 4000
@@ -74,6 +81,8 @@ def HomeView(request):
                                       {'response': res,
                                        'FullService': FullService,
                                        'InterimService': InterimService,
+                                       'register': register,
+                                       'make': make,
                                        })
 
             # not connect internet
