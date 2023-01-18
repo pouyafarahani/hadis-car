@@ -7,4 +7,4 @@ from .models import RezervModel
 
 @admin.register(RezervModel)
 class RezervAdmin(admin.ModelAdmin):
-    list_display = ['Firstname', 'Lastname', 'PhoneNumber', 'make', 'delivery']
+    list_display = ['Firstname', 'Lastname', 'PhoneNumber', 'make', 'fixed']
