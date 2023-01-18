@@ -131,10 +131,10 @@
                                     class="text-success">{{ make }}
                                 - {{ register }}</strong></p>
                         </div>
-                    <div hidden>
-                        <input type="text" value="{{ make }}" name="make">
-                        <input type="text" value="{{ register }}" name="register">
-                    </div>
+                        <div hidden>
+                            <input type="text" value="{{ make }}" name="make">
+                            <input type="text" value="{{ register }}" name="register">
+                        </div>
                         <div class="row row-cols-1 row-cols-md-3 p-3 mt-3 border-bottom">
                             <div class="col">
                                 <a href="">
@@ -145,7 +145,7 @@
                                                     class="fa-solid fa-screwdriver-wrench"></i></label>
                                         </div>
                                         <div>
-                                            <del class="text-white">£200.00</del>
+                                            <del class="text-white"></del>
                                             <span class="price"><strong>£
                                                     </strong>{{ FullService }}</span>
                                         </div>
@@ -161,7 +161,7 @@
                                                     class="fa-solid fa-wrench"></i></label>
                                         </div>
                                         <div>
-                                            <del class="text-white">£200.00</del>
+                                            <del class="text-white"></del>
                                             <span class="price"><strong>£
                                                     </strong>{{ InterimService }}</span>
                                         </div>
@@ -178,7 +178,7 @@
                                                     class="fa-sharp fa-solid fa-table-list"></i></label>
                                         </div>
                                         <div>
-                                            <del class="text-white">£200.00</del>
+                                            <del class="text-white"></del>
                                             <span class="price"><strong>£
                                                     </strong>40</span>
                                         </div>
@@ -269,7 +269,6 @@
                         <div class="mt-5 mb-4">
                             <h3 class="font">Fill your details</h3>
                         </div>
-
                         {% if forms.errors %}
                             <div class="">
                                 {{ forms.errors }}
@@ -277,26 +276,13 @@
                         {% endif %}
 
                         <div class="row p-3 mt-3 g-4">
-                            <div class="col-12 col-md-6"><input type="date" name="select_title"
-                                                                placeholder="Select date" class="inp">
+                            <div class="col-12 col-md-6"><input type="date" placeholder="Select date" class="inp">
                             </div>
+
                             <div class="col-12 col-md-6">
                                 <div>
                                     <div class="select_form_select">
                                         <select class="select_option" name="cuntry" id="countru_name">
-                                            <option value="2">select title</option>
-                                            <option value="3"> title</option>
-                                            <option value="4"> title</option>
-                                            <option value="5"> title</option>
-                                            <option value="6"> title</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div>
-                                    <div class="select_form_select">
-                                        <select class="select_option" name="Address" id="countru_name">
                                             <option value="2">please select an address</option>
                                             <option value="3">address</option>
                                             <option value="4">address</option>
@@ -307,40 +293,26 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <div>
-                                    <input type="text" placeholder="Firrst Name" name="Firstname" class="inp">
+                                    <input type="text" placeholder="Firrst Name" class="inp">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6"><input type="text" placeholder="Last Name" name="Lastname"
-                                                                class="inp">
+                            <div class="col-12 col-md-6"><input type="text" placeholder="Last Name" class="inp">
                             </div>
                             <div class="col-12 col-md-6">
                                 <div>
-                                    <input type="text" placeholder="Mobile" name="PhoneNumber" class="inp">
+                                    <input type="text" placeholder="Mobile" class="inp">
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6"><input type="tel" placeholder="fax" name="Fax" class="inp">
-                            </div>
+
                             <div class="col-12 col-md-6">
                                 <div>
-                                    <input type="email" placeholder="Email address" name="Email" class="inp">
+                                    <input type="email" placeholder="Email address" class="inp">
                                 </div>
                             </div>
 
                             <div class="col-12">
                                     <textarea class="pt-3" name="" id="" rows="5"
                                               placeholder="Anything else?"></textarea>
-                            </div>
-                        </div>
-
-
-                        <div class="row mt-2 ps-4">
-                            <div class="col">
-                                <div class="form-check form-check-inline">
-                                    <input class="" name="delivery" type="checkbox" id="inlineCheckbox2"
-                                           value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">Batteries</label>
-                                </div>
-                                </div>
                             </div>
                         </div>
 

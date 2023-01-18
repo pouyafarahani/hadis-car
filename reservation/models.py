@@ -31,8 +31,8 @@ class RezervModel(models.Model):
     Email = models.EmailField(max_length=254, null=True, blank=True)
 
     # car make
-    make = models.CharField(max_length=10, null=True, blank=True)
-    register = models.CharField(max_length=20, null=True, blank=True)
+    make = models.CharField(max_length=10, null=True, blank=True)     # in model mashin hastesh
+    register = models.CharField(max_length=20, null=True, blank=True)       # in ham pelak mashin hastesh
     # collection and delivery for free
     delivery = models.BooleanField(default=False)
 
